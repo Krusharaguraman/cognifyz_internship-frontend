@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        img {
+                border-radius: 13%;
+            }
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            width: 150px;
+            float: left;
+        }
+
+        .navbar li a {
+            font-size: 25px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #757474;
+        }
+        @media screen and (max-width: 600px) {
+            .about,#about {
+                height: 2000px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .about,#about {
+                height: 1500px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .about,#about {
+                height: 2000px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .about,#about {
+                height: 3800px;
+            }
+        }
+        
+        img {
+                border-radius: 13%;
+            }
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            font-weight: 600;
+            background-image: linear-gradient(to right, #f37e1e 15%, #f846e0);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: lucida handwriting;
+        }
+        p {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            background-color: black;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .contactstyle {
+            text-align: center;
+            font-size: 35px;
+            font-weight: 600;
+            background-image: linear-gradient(to right, #f37e1e 15%, #f846e0);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: lucida handwriting;
+        }
+
+        .home {
+            text-align: center;
+            background-color: #f7d7d7;
+            height: 630px;
+        }
+        .about {
+            height: 750px;
+        }
+        .contact {
+            background-color: #f7d7d7;
+            height: 630px;
+        }
+        form {
+            max-width: 410px;
+            margin: 0 auto;
+            background-color: #d69f9f;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn-hover {
+            width: 160px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            margin: 20px;
+            height: 35px;
+            text-align:center;
+            border: none;
+            background-size: 300% 100%;
+
+            border-radius: 50px;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .btn-hover:hover {
+            background-position: 100% 0;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .btn-hover:focus {
+            outline: none;
+        }
+        .btn-hover.color {
+            background-image: linear-gradient(to right, #ea66c2, #a24b8c, #d66b9d, #aa37d7);
+            box-shadow: 0 4px 15px 0 rgba(168, 79, 106, 0.75);
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="home" id="home">
+        <div style="height: 250px;"></div>
+        <h1>Random Image Generator Website</h1>
+        <p>Our website provides a multiple random images.</p>
+    </div>
+    <div class="about" id="about">
+        <p></p><br>
+        <p>Images Generated</p>
+        <img src="https://source.unsplash.com/random/200x200?sig=1" />
+        <img src="https://source.unsplash.com/random/200x200?sig=2" />
+        <img src="https://source.unsplash.com/random/200x200?sig=3" />
+        <img src="https://source.unsplash.com/random/200x200?sig=4" />
+        <img src="https://source.unsplash.com/random/200x200?sig=5" />
+        <img src="https://source.unsplash.com/random/200x200?sig=6" />
+        <img src="https://source.unsplash.com/random/200x200?sig=7" />
+        <img src="https://source.unsplash.com/random/200x200?sig=8" />
+        <img src="https://source.unsplash.com/random/200x200?sig=9" />
+        <img src="https://source.unsplash.com/random/200x200?sig=10" />
+        <img src="https://source.unsplash.com/random/200x200?sig=12" />
+        <img src="https://source.unsplash.com/random/200x200?sig=13" />
+        <img src="https://source.unsplash.com/random/200x200?sig=14" />
+        <img src="https://source.unsplash.com/random/200x200?sig=15" />
+        <img src="https://source.unsplash.com/random/200x200?sig=16" />
+        <img src="https://source.unsplash.com/random/200x200?sig=17" />
+        <img src="https://source.unsplash.com/random/200x200?sig=18" />
+        <img src="https://source.unsplash.com/random/200x200?sig=19" />
+    </div>
+    <div class="contact" id="contact">
+        <H1 >Contact Us</H1>
+        <div style="height: 100px;"></div>
+        <form id="contactForm" >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button class="btn-hover color" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

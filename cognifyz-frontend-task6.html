@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling and Validation</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1c5cf;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #f37e1e 15%, #f846e0);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: lucida handwriting;
+}
+
+form {
+    max-width: 410px;
+    margin: 0 auto;
+    background-color: #d69f9f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.btn-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 35px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color {
+    background-image: linear-gradient(to right, #ea66c2, #a24b8c, #d66b9d, #aa37d7);
+    box-shadow: 0 4px 15px 0 rgba(168, 79, 106, 0.75);
+}
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form id="contactForm" >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button class="btn-hover color" type="submit">Submit</button>
+    </form>
+    <script>
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', (event) => {
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+        event.preventDefault(); // Prevent form submission
+        alert('Please fill in all fields.');
+    }
+    else{
+        alert('form submitted!')
+    }
+});
+
+    </script>
+</body>
+</html>

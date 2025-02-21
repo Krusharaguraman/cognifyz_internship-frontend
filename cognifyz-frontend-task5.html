@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Generator using Api</title>
+    <style>
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, rgb(238, 168, 215), rgb(238, 150, 99),);
+}
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: lucida handwriting;
+}
+
+#quote {
+    font-size: 25px;
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+    </style>
+</head>
+<body class="center" style="background-image: linear-gradient(to right,rgb(241, 177, 166), rgb(248, 178, 131));">
+    <div style="height: 180px;"></div>
+    <h1>Random Quote Generator</h1>
+    <p id="quote"></p>
+    <button class="btn-hover color" id="new-quote">New Quote</button>
+
+    <script>
+        function fetchRandomQuote() {
+    fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(data => {
+            const quote = data.content;
+            document.getElementById("quote").textContent = quote;
+        })
+        .catch(error => {
+            console.error('Error fetching quote:', error);
+        });
+}
+document.getElementById("new-quote").addEventListener("click", fetchRandomQuote);
+fetchRandomQuote();
+    </script>
+</body>
+</html>
